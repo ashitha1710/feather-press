@@ -1,7 +1,7 @@
 [English](README.md), [Deutsch](README_de_DE.md), [Italiano](README_it_IT.md), [한국인](README_ko_KR.md), [Nederlands](README_nl_NL.md), [简体中文](README_zh_CN.md)
 
 # chyrp lite
-
+feather press a clone of chyrp lite
 chyrp lite is a lightweight, modern **content publishing platform** that allows you to create and manage blogs, videos, galleries, and quotes with ease.  
 It combines simplicity with powerful features like **AI-powered title generation**, responsive design, and a clean interface for both creators and readers.
 

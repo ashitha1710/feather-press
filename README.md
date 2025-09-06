@@ -1,138 +1,226 @@
-# Welcome to your Lovable project
+[English](README.md), [Deutsch](README_de_DE.md), [Italiano](README_it_IT.md), [한국인](README_ko_KR.md), [Nederlands](README_nl_NL.md), [简体中文](README_zh_CN.md)
 
-## Project info
+# Feather Press
 
-**URL**: https://lovable.dev/projects/75d2384f-7d03-4e4d-9db3-52364c078158
-
-## How can I edit this code?
-
-There are several ways of editing your application.
-
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/75d2384f-7d03-4e4d-9db3-52364c078158) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/75d2384f-7d03-4e4d-9db3-52364c078158) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Feather Press is a lightweight, modern **content publishing platform** that allows you to create and manage blogs, videos, galleries, and quotes with ease.  
+It combines simplicity with powerful features like **AI-powered title generation**, responsive design, and a clean interface for both creators and readers.
 
 ---
 
-## Deploying to DigitalOcean App Platform (Full Stack)
+##  What can Feather Press do?
 
-This repository is set up so a single Node.js service serves both the frontend (Vite build) and the backend (Express API).
+Feather Press makes it possible to host your own publishing platform with minimal fuss.  
+You can:
 
-### 1) Prerequisites
+- Write and publish blogs with rich content
+- Share videos, galleries, and quotes
+- Generate AI-powered titles for your posts
+- Manage your content with a friendly dashboard
+- Browse posts in an organized feed (blogs, videos, galleries, and more)
 
-- A MySQL database (DigitalOcean Managed Database, PlanetScale, or your own MySQL)
-- Optional but recommended: DigitalOcean Spaces for persistent uploads
-- GitHub repo containing this project
+Whether you want a personal blog, a multimedia hub, or a collaborative publishing platform, Feather Press adapts to your needs.
 
-### 2) App Platform Configuration
+---
 
-- Service Type: Node.js App
-- Source: GitHub (root of this project)
-- Build Command:
-  ```sh
-  npm ci && npm run build
-  ```
-- Run Command:
-  ```sh
-  npm start
-  ```
-- Health Check Path: `/api/health`
+##  Key Features
 
-The server serves the frontend build from `dist/` and keeps APIs under `/api/*`.
+### Core
+- Simple login and signup system (`admin / admin123` as test credentials, or create your own account)
+- Fully responsive frontend built with **Vite + React + TailwindCSS**
+- Secure backend powered by **Node.js + Express**
+- MySQL database hosted on **Aiven** with SSL support
+- Clean user dashboard to manage content
+- AI Generate Mode to suggest titles from your summaries
+- Deployment-ready for **Netlify (frontend)** and **Render (backend)**
 
-### 3) Environment Variables
+### Content Types
+- **Blogs** – Write and publish articles
+- **Videos** – Add and view uploaded video content
+- **Gallery** – Share image collections
+- **Quotes** – Create inspirational or reference quotes
+- **Posts** – General publishing area for any content type
 
-Copy from `.env.example.app-platform` into App Platform → Settings → Environment Variables:
+---
 
-- Database (required)
-  - `MYSQL_HOST`
-  - `MYSQL_PORT` (e.g., 3306)
-  - `MYSQL_USER`
-  - `MYSQL_PASSWORD`
-  - `MYSQL_DATABASE` (e.g., feather_press)
+##  Requirements
 
-- Storage (recommended for production uploads)
-  - `STORAGE_PROVIDER=spaces` (any non-`local` value enables object storage)
-  - `SPACES_ENDPOINT` (e.g., https://nyc3.digitaloceanspaces.com)
-  - `SPACES_REGION` (e.g., nyc3)
-  - `SPACES_BUCKET`
-  - `SPACES_KEY`
-  - `SPACES_SECRET`
-  - Optional: `PUBLIC_CDN_BASE` if you have a CDN/custom domain over your bucket
+- **Node.js 18+** and npm
+- **MySQL 5.7+ / 8.0+** (Aiven-hosted recommended)
+- SSL certificate for database connection (`aiven-ca.pem`)
+- GitHub account connected with Netlify and Render for deployment
 
-- App
-  - `NODE_ENV=production`
+---
+##  Tech Stack
 
-### 4) Auto-Deploy from GitHub
+Feather Press is built with a **modern full-stack architecture**, ensuring performance, security, and scalability.
 
-Enable "Auto-deploy on push" so each push to your chosen branch triggers a new build + deploy.
+### Frontend
+-  **Vite** – Fast build tool and development server  
+-  **React** – Component-based UI library  
+-  **TailwindCSS** – Utility-first responsive styling  
+-  **ShadCN UI** – Pre-built accessible components  
 
-### 5) Optional: App Spec
+### Backend
+-  **Node.js** – Runtime environment  
+-  **Express.js** – Minimal and flexible web framework  
+-  **JWT (JSON Web Tokens)** – Authentication & authorization  
+-  **bcrypt.js** – Password hashing for secure login  
 
-This repo includes `.do/app.yaml`. You can use DigitalOcean's "Import from a spec" to create the app with pre-filled settings. You'll still need to enter secrets (DB + Spaces) in the dashboard.
+### Database
+-  **MySQL** – Relational database management system  
+-  **Aiven Cloud** – Managed MySQL hosting with SSL support  
 
-### 6) Notes on Uploads
+### Deployment & Hosting
+-  **Netlify** – Frontend hosting and CI/CD  
+-  **Render** – Backend hosting with environment variable support  
+-  **Aiven** – Secure and reliable database infrastructure  
 
-- Locally (dev): uploads are saved under `public/uploads/` and served at `/uploads/*`.
-- App Platform: the filesystem is ephemeral. For persistence, the server uploads files to DigitalOcean Spaces and returns public URLs. Those URLs can be stored in MySQL alongside your content.
+### Additional Tools
+-  **npm** – Dependency management  
+-  **dotenv** – Environment variable management  
+-  **GitHub** – Version control and repository hosting  
 
+
+## ⚙ Installation (Local Development)
+
+### 1. Clone Repository
+```bash
+git clone https://github.com/yourusername/feather-press.git
+cd feather-press
+# Feather Press Setup Guide
+
+##  Install Dependencies
+
+### Backend
+```bash
+cd backend
+npm install
+cd ../frontend
+npm install
+  
+# Deployment Guide for Feather Press
+
+This guide will help you deploy your Feather Press application across Netlify (frontend), Render (backend), and Aiven (MySQL database).
+
+## **2. Database Deployment (Aiven)**
+
+### Setup MySQL on Aiven
+
+1. Log in to your Aiven account
+2. Create a new MySQL service
+3. Select your preferred cloud provider and region
+4. Choose an appropriate plan
+5. Once created, go to the service overview page to get your connection details:
+   - Host: `mysql-xxxxx.aivencloud.com`
+   - Port: `13605` (typically)
+   - Username: `avnadmin` (default)
+   - Password: (from Aiven dashboard)
+   - Database: `defaultdb` (default)
+
+### Download SSL Certificate
+
+1. From your Aiven MySQL service page, download the CA certificate
+2. Save it as `aiven-ca.pem`
+
+## 2. Backend Deployment (Render)
+
+## Deploy to Render
+
+1. Create a new Web Service on Render
+2. Connect your GitHub repository
+3. Configure the service:
+   - Name: `feather-press`
+   - Environment: `Node`
+   - Build Command: `npm install`
+   - Start Command: `npm start`
+
+### Set Environment Variables
+
+Add the following environment variables in the Render dashboard:
+
+```
+NODE_ENV=production
+PORT=3001
+MYSQL_HOST=your-mysql-host.aivencloud.com
+MYSQL_PORT=13605
+MYSQL_USER=avnadmin
+MYSQL_PASSWORD=your-password
+MYSQL_DATABASE=defaultdb
+MYSQL_SSL=true
+FRONTEND_URL=https://your-netlify-app.netlify.app
+```
+
+### Upload SSL Certificate
+
+1. In the Render dashboard, go to your web service
+2. Navigate to the "Environment" tab
+3. Under "Secret Files", add a new secret file
+4. Name: `MYSQL_SSL_CA_PATH`
+5. File contents: Copy and paste the contents of your `aiven-ca.pem` file
+
+## 3. Frontend Deployment (Netlify)
+
+### Deploy to Netlify
+
+1. Create a new site on Netlify
+2. Connect your GitHub repository
+3. Configure the build settings:
+   - Build command: `npm run build`
+   - Publish directory: `dist`
+
+### Set Environment Variables
+
+Add the following environment variable in the Netlify dashboard:
+
+```
+VITE_API_BASE_URL=https://your-render-app.onrender.com/api
+```
+
+## 4. Verify Deployment
+
+1. Visit your Netlify URL to ensure the frontend is working
+2. Test API endpoints through your browser or tools like Postman
+3. Check Render logs for any backend errors
+4. Verify database connections in the Render logs
+
+## Troubleshooting
+
+### CORS Issues
+
+If you encounter CORS errors:
+
+1. Ensure the `FRONTEND_URL` in your Render environment variables exactly matches your Netlify URL
+2. Check the CORS configuration in `server.js`
+
+### Database Connection Issues
+
+If the backend can't connect to the database:
+
+1. Verify all MySQL environment variables are correct
+2. Check that the SSL certificate is properly uploaded to Render
+3. Look for connection errors in the Render logs
+
+### Frontend API Connection Issues
+
+If the frontend can't connect to the backend:
+
+1. Ensure `VITE_API_BASE_URL` is correctly set in Netlify
+2. Check that the backend is running properly on Render
+3. Verify the API endpoints are working by testing them directly
+
+## Maintenance
+
+### Updating Your Application
+
+1. Push changes to your GitHub repository
+2. Netlify and Render will automatically rebuild and deploy your application
+
+### Monitoring
+
+1. Use Render's built-in logs to monitor backend performance
+2. Check Aiven's dashboard for database metrics
+3. Use Netlify's analytics for frontend monitoring
+```
+Feather Press is more than just a publishing tool — it is a powerful yet elegant ecosystem for digital creators. With its modular architecture, enterprise-ready deployment, and intuitive design philosophy, it delivers the perfect balance between simplicity for beginners and scalability for professionals.
+
+🚀 Whether for personal blogging, collaborative media publishing, or professional knowledge sharing, Feather Press stands as a versatile, future-ready solution.

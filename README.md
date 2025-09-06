@@ -1,15 +1,15 @@
 [English](README.md), [Deutsch](README_de_DE.md), [Italiano](README_it_IT.md), [한국인](README_ko_KR.md), [Nederlands](README_nl_NL.md), [简体中文](README_zh_CN.md)
 
-# Feather Press
+# chyrp lite
 
-Feather Press is a lightweight, modern **content publishing platform** that allows you to create and manage blogs, videos, galleries, and quotes with ease.  
+chyrp lite is a lightweight, modern **content publishing platform** that allows you to create and manage blogs, videos, galleries, and quotes with ease.  
 It combines simplicity with powerful features like **AI-powered title generation**, responsive design, and a clean interface for both creators and readers.
 
 ---
 
-##  What can Feather Press do?
+##  What can chyrp lite do?
 
-Feather Press makes it possible to host your own publishing platform with minimal fuss.  
+chyrp lite makes it possible to host your own publishing platform with minimal fuss.  
 You can:
 
 - Write and publish blogs with rich content
@@ -18,7 +18,7 @@ You can:
 - Manage your content with a friendly dashboard
 - Browse posts in an organized feed (blogs, videos, galleries, and more)
 
-Whether you want a personal blog, a multimedia hub, or a collaborative publishing platform, Feather Press adapts to your needs.
+Whether you want a personal blog, a multimedia hub, or a collaborative publishing platform, chyrp lite adapts to your needs.
 
 ---
 
@@ -52,7 +52,7 @@ Whether you want a personal blog, a multimedia hub, or a collaborative publishin
 ---
 ##  Tech Stack
 
-Feather Press is built with a **modern full-stack architecture**, ensuring performance, security, and scalability.
+chyrp lite is built with a **modern full-stack architecture**, ensuring performance, security, and scalability.
 
 ### Frontend
 -  **Vite** – Fast build tool and development server  
@@ -87,7 +87,7 @@ Feather Press is built with a **modern full-stack architecture**, ensuring perfo
 ```bash
 git clone https://github.com/yourusername/feather-press.git
 cd feather-press
-# Feather Press Setup Guide
+# chyrp lite Setup Guide
 
 ##  Install Dependencies
 
@@ -98,9 +98,9 @@ npm install
 cd ../frontend
 npm install
   
-# Deployment Guide for Feather Press
+# Deployment Guide for chyrp lite
 
-This guide will help you deploy your Feather Press application across Netlify (frontend), Render (backend), and Aiven (MySQL database).
+This guide will help you deploy your chyrp lite application across Netlify (frontend), Render (backend), and Aiven (MySQL database).
 
 ## **2. Database Deployment (Aiven)**
 
@@ -221,6 +221,6 @@ If the frontend can't connect to the backend:
 2. Check Aiven's dashboard for database metrics
 3. Use Netlify's analytics for frontend monitoring
 ```
-Feather Press is more than just a publishing tool — it is a powerful yet elegant ecosystem for digital creators. With its modular architecture, enterprise-ready deployment, and intuitive design philosophy, it delivers the perfect balance between simplicity for beginners and scalability for professionals.
+chyrp lite is more than just a publishing tool — it is a powerful yet elegant ecosystem for digital creators. With its modular architecture, enterprise-ready deployment, and intuitive design philosophy, it delivers the perfect balance between simplicity for beginners and scalability for professionals.
 
-🚀 Whether for personal blogging, collaborative media publishing, or professional knowledge sharing, Feather Press stands as a versatile, future-ready solution.
+🚀 Whether for personal blogging, collaborative media publishing, or professional knowledge sharing, chyrp lite stands as a versatile, future-ready solution.
